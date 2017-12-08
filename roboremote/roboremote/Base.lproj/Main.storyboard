@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="roboremote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="syt-30-R6r">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPP-1r-oyK">
+                                        <rect key="frame" x="0.0" y="0.0" width="333.5" height="375"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X9i-GC-0CO" userLabel="ThrottleIndicatorView">
+                                                <rect key="frame" x="0.0" y="94" width="15" height="187.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RYT-f9-0VX" userLabel="Forward">
+                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="0.0"/>
+                                                        <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ten-Vh-GKW" userLabel="Backward">
+                                                        <rect key="frame" x="0.0" y="94" width="15" height="0.0"/>
+                                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="mzb-i1-VO8"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="ten-Vh-GKW" firstAttribute="centerX" secondItem="X9i-GC-0CO" secondAttribute="centerX" id="2Nc-m8-TCI"/>
+                                                    <constraint firstItem="RYT-f9-0VX" firstAttribute="centerX" secondItem="X9i-GC-0CO" secondAttribute="centerX" id="ABX-NX-zdF"/>
+                                                    <constraint firstItem="ten-Vh-GKW" firstAttribute="width" secondItem="X9i-GC-0CO" secondAttribute="width" id="BrU-qb-y0O"/>
+                                                    <constraint firstItem="ten-Vh-GKW" firstAttribute="top" secondItem="X9i-GC-0CO" secondAttribute="centerY" id="Tnj-Hw-Op5"/>
+                                                    <constraint firstItem="RYT-f9-0VX" firstAttribute="width" secondItem="X9i-GC-0CO" secondAttribute="width" id="skr-bd-zZL"/>
+                                                    <constraint firstItem="RYT-f9-0VX" firstAttribute="bottom" secondItem="X9i-GC-0CO" secondAttribute="centerY" id="tLH-X1-VTK"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="X9i-GC-0CO" firstAttribute="leading" secondItem="GPP-1r-oyK" secondAttribute="leading" id="4Wa-Y4-fXT"/>
+                                            <constraint firstItem="X9i-GC-0CO" firstAttribute="height" secondItem="GPP-1r-oyK" secondAttribute="height" multiplier="0.5" id="LOs-5y-r8X"/>
+                                            <constraint firstItem="X9i-GC-0CO" firstAttribute="centerY" secondItem="GPP-1r-oyK" secondAttribute="centerY" id="QeB-gC-aKv"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="SHx-cL-yLN" appends="YES" id="Gw1-FA-aCz"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gy-hH-DPS">
+                                        <rect key="frame" x="333.5" y="0.0" width="333.5" height="375"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="2xn-7L-64y" appends="YES" id="ul7-8T-hOq"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="syt-30-R6r" secondAttribute="trailing" id="QtJ-6x-DF2"/>
+                            <constraint firstItem="syt-30-R6r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qvg-ZB-LGX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="syt-30-R6r" secondAttribute="bottom" id="kaq-FZ-Fdj"/>
+                            <constraint firstItem="syt-30-R6r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="upl-lh-U01"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="rvHeight" destination="mzb-i1-VO8" id="5d1-2M-qPH"/>
+                        <outlet property="steeringView" destination="0gy-hH-DPS" id="wcH-sO-U7H"/>
+                        <outlet property="throttleIndicatorView" destination="X9i-GC-0CO" id="98N-7k-NAo"/>
+                        <outlet property="throttleView" destination="GPP-1r-oyK" id="KUd-cd-DnL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="SHx-cL-yLN" userLabel="ThrottlePan">
+                    <connections>
+                        <action selector="didPanThrottle:" destination="BYZ-38-t0r" id="0N7-Fo-6Lv"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="2xn-7L-64y" userLabel="SteeringPan">
+                    <connections>
+                        <action selector="didPanSteering:" destination="BYZ-38-t0r" id="BA8-6I-J7V"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="25.637181409295355" y="13.6"/>
+        </scene>
+    </scenes>
+</document>
