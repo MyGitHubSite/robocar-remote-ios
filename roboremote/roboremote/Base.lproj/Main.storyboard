@@ -47,7 +47,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gy-hH-DPS">
                                         <rect key="frame" x="333.5" y="0.0" width="333.5" height="375"/>
                                         <subviews>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-100" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Iwj-Ia-wvD">
+                                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Iwj-Ia-wvD">
                                                 <rect key="frame" x="82" y="0.0" width="170.5" height="31"/>
                                                 <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,6 +79,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="steeringIndicatorSlider" destination="Iwj-Ia-wvD" id="iFs-w9-DVq"/>
                         <outlet property="steeringView" destination="0gy-hH-DPS" id="wcH-sO-U7H"/>
                         <outlet property="throttleIndicatorView" destination="X9i-GC-0CO" id="98N-7k-NAo"/>
                         <outlet property="throttleView" destination="GPP-1r-oyK" id="KUd-cd-DnL"/>
