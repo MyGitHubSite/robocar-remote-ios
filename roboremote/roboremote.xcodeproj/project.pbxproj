@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F3F27E21FF01AE300322528 /* ThrottleIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F27E11FF01AE300322528 /* ThrottleIndicatorView.swift */; };
 		E27894E51FDAB1BB00881AC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27894E41FDAB1BB00881AC8 /* AppDelegate.swift */; };
 		E27894E71FDAB1BB00881AC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27894E61FDAB1BB00881AC8 /* ViewController.swift */; };
 		E27894EA1FDAB1BB00881AC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E27894E81FDAB1BB00881AC8 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F3F27E11FF01AE300322528 /* ThrottleIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrottleIndicatorView.swift; sourceTree = "<group>"; };
 		E27894E11FDAB1BB00881AC8 /* roboremote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = roboremote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E27894E41FDAB1BB00881AC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E27894E61FDAB1BB00881AC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F3F27E01FF01AC000322528 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4F3F27E11FF01AE300322528 /* ThrottleIndicatorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E27894D81FDAB1BB00881AC8 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +64,7 @@
 		E27894E31FDAB1BB00881AC8 /* roboremote */ = {
 			isa = PBXGroup;
 			children = (
+				4F3F27E01FF01AC000322528 /* View */,
 				E27894E41FDAB1BB00881AC8 /* AppDelegate.swift */,
 				E27894E61FDAB1BB00881AC8 /* ViewController.swift */,
 				E27894E81FDAB1BB00881AC8 /* Main.storyboard */,
@@ -137,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E27894E71FDAB1BB00881AC8 /* ViewController.swift in Sources */,
+				4F3F27E21FF01AE300322528 /* ThrottleIndicatorView.swift in Sources */,
 				E27894E51FDAB1BB00881AC8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

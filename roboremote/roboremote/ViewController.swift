@@ -2,9 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var throttleIndicatorView: UIView!
-    @IBOutlet weak var fwHeight: NSLayoutConstraint!
-    @IBOutlet weak var rvHeight: NSLayoutConstraint!
+    @IBOutlet weak var throttleIndicatorView: ThrottleIndicatorView!
     
     @IBOutlet weak var throttleView: UIView!
     @IBOutlet weak var steeringView: UIView!
@@ -14,6 +12,7 @@ class ViewController: UIViewController {
     var throttle : CGFloat = 0.0 {
         didSet {
             print(throttle)
+            self.throttleIndicatorView.throttleInput = throttle
         }
     }
     
@@ -30,7 +29,7 @@ class ViewController: UIViewController {
         case .began:
             throttleStartPnt = sender.location(in: throttleView)
         case .changed:
-            let ydiff =  sender.location(in: throttleView).y - throttleStartPnt!.y
+            let ydiff =  throttleStartPnt!.y - sender.location(in: throttleView).y
             var scaledDiff = ydiff / throttleRatio
             if scaledDiff > 1 {
                 scaledDiff = 1
@@ -38,11 +37,9 @@ class ViewController: UIViewController {
             if scaledDiff < -1 {
                 scaledDiff = -1
             }
-            updateThrottleindicator(throttleAmnt: scaledDiff)
             throttle = scaledDiff
             
         default:
-            updateThrottleindicator(throttleAmnt: 0)
             throttle = 0
             break
         }
@@ -57,20 +54,6 @@ class ViewController: UIViewController {
             break
         default:
             break
-        }
-    }
-    
-    func updateThrottleindicator(throttleAmnt throttle: CGFloat) {
-        if throttle < 0 {
-            // forward
-            let scaledThrottle = throttle / -2
-            rvHeight.constant = 0
-            fwHeight.constant = throttleIndicatorView.bounds.height * scaledThrottle
-        }else {
-            // reverse
-            let scaledThrottle = throttle / 2
-            rvHeight.constant = throttleIndicatorView.bounds.height * scaledThrottle
-            fwHeight.constant = 0
         }
     }
     

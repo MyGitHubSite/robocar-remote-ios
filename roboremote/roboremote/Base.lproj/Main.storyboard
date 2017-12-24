@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,33 +25,15 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPP-1r-oyK">
                                         <rect key="frame" x="0.0" y="0.0" width="333.5" height="375"/>
                                         <subviews>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X9i-GC-0CO" userLabel="ThrottleIndicatorView">
-                                                <rect key="frame" x="0.0" y="94" width="15" height="187.5"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RYT-f9-0VX" userLabel="Forward">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="0.0"/>
-                                                        <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ten-Vh-GKW" userLabel="Backward">
-                                                        <rect key="frame" x="0.0" y="94" width="15" height="0.0"/>
-                                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="30" id="mzb-i1-VO8"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9i-GC-0CO" userLabel="ThrottleIndicatorView" customClass="ThrottleIndicatorView" customModule="roboremote" customModuleProvider="target">
+                                                <rect key="frame" x="0.5" y="94" width="15" height="187.5"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="ten-Vh-GKW" firstAttribute="centerX" secondItem="X9i-GC-0CO" secondAttribute="centerX" id="2Nc-m8-TCI"/>
-                                                    <constraint firstItem="RYT-f9-0VX" firstAttribute="centerX" secondItem="X9i-GC-0CO" secondAttribute="centerX" id="ABX-NX-zdF"/>
-                                                    <constraint firstItem="ten-Vh-GKW" firstAttribute="width" secondItem="X9i-GC-0CO" secondAttribute="width" id="BrU-qb-y0O"/>
-                                                    <constraint firstItem="ten-Vh-GKW" firstAttribute="top" secondItem="X9i-GC-0CO" secondAttribute="centerY" id="Tnj-Hw-Op5"/>
-                                                    <constraint firstItem="RYT-f9-0VX" firstAttribute="width" secondItem="X9i-GC-0CO" secondAttribute="width" id="skr-bd-zZL"/>
-                                                    <constraint firstItem="RYT-f9-0VX" firstAttribute="bottom" secondItem="X9i-GC-0CO" secondAttribute="centerY" id="tLH-X1-VTK"/>
+                                                    <constraint firstAttribute="width" constant="15" id="RSo-Mg-KRw"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="X9i-GC-0CO" firstAttribute="leading" secondItem="GPP-1r-oyK" secondAttribute="leading" id="4Wa-Y4-fXT"/>
@@ -65,8 +46,21 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gy-hH-DPS">
                                         <rect key="frame" x="333.5" y="0.0" width="333.5" height="375"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-100" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Iwj-Ia-wvD">
+                                                <rect key="frame" x="82" y="0.0" width="170.5" height="31"/>
+                                                <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="thumbTintColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </slider>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="Iwj-Ia-wvD" firstAttribute="width" secondItem="0gy-hH-DPS" secondAttribute="width" multiplier="0.5" id="1Fg-3c-hnx"/>
+                                            <constraint firstItem="Iwj-Ia-wvD" firstAttribute="centerX" secondItem="0gy-hH-DPS" secondAttribute="centerX" id="C1B-IM-UkY"/>
+                                            <constraint firstItem="Iwj-Ia-wvD" firstAttribute="top" secondItem="0gy-hH-DPS" secondAttribute="top" id="MCp-Nm-yAY"/>
+                                        </constraints>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="2xn-7L-64y" appends="YES" id="ul7-8T-hOq"/>
                                         </connections>
@@ -85,7 +79,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="rvHeight" destination="mzb-i1-VO8" id="5d1-2M-qPH"/>
                         <outlet property="steeringView" destination="0gy-hH-DPS" id="wcH-sO-U7H"/>
                         <outlet property="throttleIndicatorView" destination="X9i-GC-0CO" id="98N-7k-NAo"/>
                         <outlet property="throttleView" destination="GPP-1r-oyK" id="KUd-cd-DnL"/>
