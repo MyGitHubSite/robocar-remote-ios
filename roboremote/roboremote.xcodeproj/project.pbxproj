@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4F3F27E21FF01AE300322528 /* ThrottleIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F27E11FF01AE300322528 /* ThrottleIndicatorView.swift */; };
+		4F9565EB2007686E004666BF /* DiscoveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9565EA2007686E004666BF /* DiscoveryVC.swift */; };
+		4F9565ED20076E33004666BF /* RcCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9565EC20076E33004666BF /* RcCar.swift */; };
+		4F9565EF20076E53004666BF /* BleConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9565EE20076E53004666BF /* BleConnection.swift */; };
+		4F9565F120076F68004666BF /* BluetoothEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9565F020076F68004666BF /* BluetoothEnvironment.swift */; };
+		4F9565F3200775DE004666BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9565F2200775DE004666BF /* Constants.swift */; };
 		E27894E51FDAB1BB00881AC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27894E41FDAB1BB00881AC8 /* AppDelegate.swift */; };
-		E27894E71FDAB1BB00881AC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27894E61FDAB1BB00881AC8 /* ViewController.swift */; };
+		E27894E71FDAB1BB00881AC8 /* RemoteControlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27894E61FDAB1BB00881AC8 /* RemoteControlVC.swift */; };
 		E27894EA1FDAB1BB00881AC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E27894E81FDAB1BB00881AC8 /* Main.storyboard */; };
 		E27894EC1FDAB1BB00881AC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27894EB1FDAB1BB00881AC8 /* Assets.xcassets */; };
 		E27894EF1FDAB1BB00881AC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E27894ED1FDAB1BB00881AC8 /* LaunchScreen.storyboard */; };
@@ -17,9 +22,14 @@
 
 /* Begin PBXFileReference section */
 		4F3F27E11FF01AE300322528 /* ThrottleIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrottleIndicatorView.swift; sourceTree = "<group>"; };
+		4F9565EA2007686E004666BF /* DiscoveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryVC.swift; sourceTree = "<group>"; };
+		4F9565EC20076E33004666BF /* RcCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RcCar.swift; sourceTree = "<group>"; };
+		4F9565EE20076E53004666BF /* BleConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleConnection.swift; sourceTree = "<group>"; };
+		4F9565F020076F68004666BF /* BluetoothEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothEnvironment.swift; sourceTree = "<group>"; };
+		4F9565F2200775DE004666BF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E27894E11FDAB1BB00881AC8 /* roboremote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = roboremote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E27894E41FDAB1BB00881AC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E27894E61FDAB1BB00881AC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E27894E61FDAB1BB00881AC8 /* RemoteControlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControlVC.swift; sourceTree = "<group>"; };
 		E27894E91FDAB1BB00881AC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E27894EB1FDAB1BB00881AC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E27894EE1FDAB1BB00881AC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -45,6 +55,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4F9565E92007589C004666BF /* BT */ = {
+			isa = PBXGroup;
+			children = (
+				4F9565EC20076E33004666BF /* RcCar.swift */,
+				4F9565EE20076E53004666BF /* BleConnection.swift */,
+				4F9565F020076F68004666BF /* BluetoothEnvironment.swift */,
+				4F9565F2200775DE004666BF /* Constants.swift */,
+			);
+			path = BT;
+			sourceTree = "<group>";
+		};
 		E27894D81FDAB1BB00881AC8 = {
 			isa = PBXGroup;
 			children = (
@@ -64,9 +85,11 @@
 		E27894E31FDAB1BB00881AC8 /* roboremote */ = {
 			isa = PBXGroup;
 			children = (
+				4F9565E92007589C004666BF /* BT */,
 				4F3F27E01FF01AC000322528 /* View */,
 				E27894E41FDAB1BB00881AC8 /* AppDelegate.swift */,
-				E27894E61FDAB1BB00881AC8 /* ViewController.swift */,
+				E27894E61FDAB1BB00881AC8 /* RemoteControlVC.swift */,
+				4F9565EA2007686E004666BF /* DiscoveryVC.swift */,
 				E27894E81FDAB1BB00881AC8 /* Main.storyboard */,
 				E27894EB1FDAB1BB00881AC8 /* Assets.xcassets */,
 				E27894ED1FDAB1BB00881AC8 /* LaunchScreen.storyboard */,
@@ -147,9 +170,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E27894E71FDAB1BB00881AC8 /* ViewController.swift in Sources */,
+				4F9565F120076F68004666BF /* BluetoothEnvironment.swift in Sources */,
+				E27894E71FDAB1BB00881AC8 /* RemoteControlVC.swift in Sources */,
+				4F9565ED20076E33004666BF /* RcCar.swift in Sources */,
+				4F9565EB2007686E004666BF /* DiscoveryVC.swift in Sources */,
+				4F9565EF20076E53004666BF /* BleConnection.swift in Sources */,
 				4F3F27E21FF01AE300322528 /* ThrottleIndicatorView.swift in Sources */,
 				E27894E51FDAB1BB00881AC8 /* AppDelegate.swift in Sources */,
+				4F9565F3200775DE004666BF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
