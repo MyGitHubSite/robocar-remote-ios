@@ -67,7 +67,7 @@ class RemoteControlVC: UIViewController {
         throttle = 0
         steerDirection = 0
         throttleRatio = max(throttleView.bounds.height / 4, 1)
-        steerRatio = max(steeringView.bounds.width / 6, 1)
+        steerRatio = max(steeringView.bounds.width / 5, 1)
     }
 
     // controls
