@@ -35,7 +35,8 @@ class RemoteControlVC: UIViewController {
         didSet {
             //print(throttle)
             self.throttleIndicatorView.throttleInput = throttle
-            car?.throttleValue = Int8(throttle * 100)
+            // invert the value because the joystick interface expects negative value for forward throttle...
+            car?.throttleValue = Int8(throttle * -127)
         }
     }
     
@@ -44,7 +45,7 @@ class RemoteControlVC: UIViewController {
     var steerDirection : CGFloat = 0.0 {
         didSet {
             self.steeringIndicatorSlider.value = Float(steerDirection)
-            car?.steeringDirection = Int8(steerDirection * 100)
+            car?.steeringDirection = Int8(steerDirection * 127)
         }
     }
     
