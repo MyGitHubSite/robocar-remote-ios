@@ -142,7 +142,13 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
 							com.apple.HomeKit = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
 								enabled = 0;
 							};
 						};
@@ -333,7 +339,7 @@
 				DEVELOPMENT_TEAM = 7XT7RQW894;
 				INFOPLIST_FILE = roboremote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jayway.roboremote;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jayway.internal.roboremote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -348,7 +354,7 @@
 				DEVELOPMENT_TEAM = 7XT7RQW894;
 				INFOPLIST_FILE = roboremote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jayway.roboremote;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jayway.internal.roboremote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
