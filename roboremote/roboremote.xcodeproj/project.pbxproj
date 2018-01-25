@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F26BFC52019E88C00E2F331 /* roboremote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = roboremote.entitlements; sourceTree = "<group>"; };
 		4F3F27E11FF01AE300322528 /* ThrottleIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrottleIndicatorView.swift; sourceTree = "<group>"; };
 		4F9565EA2007686E004666BF /* DiscoveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryVC.swift; sourceTree = "<group>"; };
 		4F9565EC20076E33004666BF /* RcCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RcCar.swift; sourceTree = "<group>"; };
@@ -47,6 +48,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F26BFC62019E88C00E2F331 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4F3F27E01FF01AC000322528 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +79,7 @@
 			children = (
 				E27894E31FDAB1BB00881AC8 /* roboremote */,
 				E27894E21FDAB1BB00881AC8 /* Products */,
+				4F26BFC62019E88C00E2F331 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +94,7 @@
 		E27894E31FDAB1BB00881AC8 /* roboremote */ = {
 			isa = PBXGroup;
 			children = (
+				4F26BFC52019E88C00E2F331 /* roboremote.entitlements */,
 				4F9565E92007589C004666BF /* BT */,
 				4F3F27E01FF01AC000322528 /* View */,
 				E27894E41FDAB1BB00881AC8 /* AppDelegate.swift */,
@@ -131,6 +141,11 @@
 					E27894E01FDAB1BB00881AC8 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HomeKit = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
